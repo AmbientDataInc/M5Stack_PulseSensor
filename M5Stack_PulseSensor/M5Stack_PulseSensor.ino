@@ -1,4 +1,4 @@
-#ifdef ARDUINO_M5Stack-Core-ESP32
+#ifdef ARDUINO_M5Stack_Core_ESP32
 #include <M5Stack.h>
 #endif
 
@@ -13,7 +13,7 @@ const int THRESHOLD = 550;   // Adjust this number to avoid noise when idle
 PulseSensorPlayground pulseSensor;
 
 void setup() {
-#ifdef ARDUINO_M5Stack-Core-ESP32
+#ifdef ARDUINO_M5Stack_Core_ESP32
     M5.begin();
     dacWrite(25, 0); // Speaker OFF
 #endif
@@ -83,4 +83,3 @@ void loop() {
         M5.Lcd.printf("BPM: %d", pulseSensor.getBeatsPerMinute());
     }
 }
-

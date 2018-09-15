@@ -1,4 +1,4 @@
-#ifdef ARDUINO_M5Stack-Core-ESP32
+#ifdef ARDUINO_M5Stack_Core_ESP32
 #include <M5Stack.h>
 #endif
 #include <TinyGPS++.h>
@@ -26,7 +26,7 @@ unsigned int channelId = 100; // AmbientのチャネルID
 const char* writeKey = "writeKey"; // ライトキー
 
 void setup() {
-#ifdef ARDUINO_M5Stack-Core-ESP32
+#ifdef ARDUINO_M5Stack_Core_ESP32
     M5.begin();
     dacWrite(25, 0); // Speaker OFF
 #endif
@@ -132,4 +132,3 @@ void loop() {
         ambient.send();
     }
 }
-
